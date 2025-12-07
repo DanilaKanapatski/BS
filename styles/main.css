@@ -1,0 +1,81 @@
+.main {
+    margin-top: 54px;
+}
+
+.main img {
+    height: 366px;
+    background: #d9d9d9;
+    width: 100%;
+}
+
+.category {
+    margin-top: 70px;
+}
+
+.brands {
+    margin-top: 70px;
+}
+
+.brands-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.brands-list li {
+    border-bottom: 1px solid var(--main-gray);
+}
+
+.brands-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-gray);
+    transition: all 0.3s ease;
+}
+
+.brands-list a:hover {
+    color: var(--main-black);
+}
+
+.brands-list a svg path {
+    transition: all 0.3s ease;
+}
+
+.brands-list a:hover svg path {
+    fill: var(--main-black);
+}
+
+.form {
+    margin-top: 70px;
+    background: linear-gradient(162deg, #000 0%, #484343 100%);
+    padding: 305px 0 50px 50px;
+}
+
+.form-title {
+    margin-bottom: 30px;
+    max-width: 778px;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.form-btn {
+    border-radius: 8px;
+    padding: 13px 10px;
+    width: 558px;
+    height: 55px;
+    background: var(--main-white);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-black);
+}

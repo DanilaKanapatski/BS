@@ -1,0 +1,30 @@
+.header {
+    margin-top: 30px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--main-grey);
+}
+
+.header-list {
+    display: flex;
+    gap: 59px;
+}
+
+.header-list a {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-black);
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
