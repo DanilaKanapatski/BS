@@ -1,0 +1,8 @@
+.item-select .heart {
+    fill: #dfdfdf;          /* дефолт */
+    transition: fill 0.25s ease;
+}
+
+.item-select.active .heart {
+    fill: #ff3b30;          /* при клике */
+}

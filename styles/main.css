@@ -12,11 +12,20 @@
     margin-top: 70px;
 }
 
+.popular .item-category {
+    background: var(--popular-main);
+}
+
+.shoes .item-category {
+    background: var(--zhenskoe);
+}
+
 .brands {
     margin-top: 70px;
 }
 
 .brands-list {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -49,22 +58,38 @@
 .brands-list a:hover svg path {
     fill: var(--main-black);
 }
+/* Стили для превью изображения */
+.brand-preview {
+    position: fixed;
+    display: none;
+    z-index: 1000;
+    pointer-events: none; /* Чтобы не мешало взаимодействию со ссылками */
+    overflow: hidden;
+    transform: translate(-50%, -100%); /* Центрируем над курсором */
+}
 
 .form {
+    position: relative;
     margin-top: 70px;
-    background: linear-gradient(162deg, #000 0%, #484343 100%);
-    padding: 305px 0 50px 50px;
+    background: #fdfdfc;
+    padding: 236px 0 50px 50px;
+}
+
+.form img {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .form-title {
-    margin-bottom: 30px;
-    max-width: 778px;
+    margin-bottom: 28px;
+    max-width: 492px;
     font-weight: 700;
     font-size: 55px;
     line-height: 130%;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--main-black);
 }
 
 .form-btn {
@@ -72,10 +97,149 @@
     padding: 13px 10px;
     width: 558px;
     height: 55px;
-    background: var(--main-white);
+    background: var(--main-black);
     font-weight: 700;
     font-size: 20px;
     line-height: 110%;
     text-transform: uppercase;
-    color: var(--main-black);
+    color: var(--main-grey);
+}
+
+@media screen and (max-width: 1491px) {
+    .main {
+        margin-top: 40px;
+    }
+
+    .category {
+        margin-top: 60px;
+    }
+
+    .brands {
+        margin-top: 60px;
+    }
+
+    .form {
+        margin-top: 60px;
+        padding: 236px 0 50px 50px;
+    }
+
+    .form-title {
+        margin-bottom: 28px;
+        max-width: 492px;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+        color: var(--main-black);
+    }
+
+    .form-btn {
+        border-radius: 8px;
+        padding: 13px 10px;
+        width: 558px;
+        height: 55px;
+        background: var(--main-black);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: var(--main-grey);
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .main {
+        margin-top: 40px;
+    }
+
+    .main img {
+        height: 276px;
+    }
+
+    .category {
+        margin-top: 40px;
+    }
+
+    .brands {
+        margin-top: 40px;
+    }
+
+    .brands-list {
+        margin-top: 30px;
+    }
+
+    .brands-list a {
+        font-size: 30px;
+    }
+
+    .form {
+        margin-top: 40px;
+        padding: 137px 0 50px 50px;
+    }
+
+    .form-title {
+        margin-bottom: 20px;
+        max-width: 492px;
+        font-size: 36px;
+    }
+
+    .form-btn {
+        width: 558px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .main {
+        margin-top: 15px;
+    }
+
+    .main img {
+        height: 172px;
+    }
+
+    .category {
+        margin-top: 30px;
+    }
+
+    .brands {
+        margin-top: 30px;
+    }
+
+    .brands-list {
+        margin-top: 30px;
+    }
+
+    .brands-list a {
+        padding: 15px 0;
+        font-size: 16px;
+    }
+
+    .form {
+        margin-top: 30px;
+        padding: 158px 14px 14px 14px;
+    }
+
+    .form img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 300px;
+    }
+
+    .form-title {
+        margin-bottom: 20px;
+        max-width: 284px;
+        font-size: 20px;
+    }
+
+    .form-btn {
+        border-radius: 6px;
+        padding: 10px;
+        width: 302px;
+        height: 40px;
+        font-size: 12px;
+    }
 }

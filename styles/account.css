@@ -1,0 +1,621 @@
+.account .container {
+    display: flex;
+    gap: 20px;
+}
+
+.account-aside {
+    max-width: 358px;
+    width: 100%;
+}
+
+.aside-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.aside-list li {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--main-grey);
+    cursor: pointer;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--main-grey);
+}
+
+.aside-list .aside-list__active {
+    color: var(--main-black);
+}
+
+.profile {
+    display: block;
+    margin-top: 89px;
+    max-width: 547px;
+    width: 100%;
+}
+
+.profile-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.profile-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-form input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--main-black);
+    border-radius: 10px;
+    padding: 10px 10px 10px 30px;
+    width: 100%;
+    height: 59px;
+    background: #f8f8f8;
+    border: none;
+}
+
+.profile-form input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--main-black);
+}
+
+.profile-btn {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-white);
+    background: var(--main-black);
+    border-radius: 12px;
+    padding: 10px 13px;
+    width: 100%;
+    height: 55px;
+}
+
+.profile-form input.valid {
+    border-color: #48bb78;
+}
+
+.profile-form input.invalid {
+    border-color: #f56565;
+}
+
+.error-message {
+    color: #f56565;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-message {
+    color: #48bb78;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.password-strength {
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    background: #e2e8f0;
+}
+
+.password-strength.weak {
+    background: #f56565;
+    width: 33%;
+}
+
+.password-strength.medium {
+    background: #ed8936;
+    width: 66%;
+}
+
+.password-strength.strong {
+    background: #48bb78;
+    width: 100%;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 500;
+    display: none;
+    animation: slideIn 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+}
+
+.requirements {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.orders {
+    margin-top: 89px;
+    display: none;
+}
+
+.orders-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.orders-list {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 38px;
+}
+
+.orders-list li {
+    display: flex;
+    gap: 36px;
+    align-items: start;
+    max-width: 534px;
+    width: 100%;
+}
+
+.orders-list li img {
+    width: 207px;
+    height: 95px;
+}
+
+.order-item__text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-item__name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--main-black);
+}
+
+.order-item__count {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--grey-3);
+}
+
+.order-item__price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000;
+}
+
+.orders-btn {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-white);
+    background: var(--main-black);
+    border-radius: 12px;
+    padding: 10px 13px;
+    width: 547px;
+    height: 55px;
+}
+
+.address {
+    margin-top: 89px;
+    max-width: 547px;
+    width: 100%;
+    display: none;
+}
+
+.address-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.address-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.address-form input {
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #f8f8f8;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--main-black);
+}
+
+.address-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-wrapper input {
+    width: 268px;
+}
+
+.address-form input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--main-black);
+}
+
+.address-btn {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-white);
+    background: var(--main-black);
+    border-radius: 12px;
+    padding: 10px 13px;
+    width: 100%;
+    height: 55px;
+}
+
+@media screen and (max-width: 1491px) {
+    .account-aside {
+        max-width: 280px;
+    }
+
+    .profile {
+        margin-top: 54px;
+        max-width: 580px;
+    }
+
+    .orders {
+        margin-top: 54px;
+    }
+
+    .orders-list {
+        margin-top: 54px;
+        gap: 20px;
+    }
+
+    .orders-list li {
+        gap: 30px;
+        max-width: 430px;
+    }
+
+    .orders-list li img {
+        width: 130px;
+        height: 60px;
+    }
+
+    .orders-btn {
+        margin-top: 50px;
+    }
+
+    .address {
+        margin-top: 54px;
+    }
+
+    .address-form {
+        margin-top: 30px;
+        max-width: 430px;
+    }
+
+    .address-wrapper input {
+        width: 208px;
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .account .container {
+        gap: 16px;
+    }
+
+    .account-aside {
+        max-width: 228px;
+    }
+
+    .aside-list li {
+        font-size: 16px;
+    }
+
+    .profile {
+        margin-top: 40px;
+        max-width: 472px;
+    }
+
+    .profile-title {
+        font-size: 32px;
+    }
+
+    .profile-form input {
+        font-size: 12px;
+        height: 45px;
+    }
+
+    .profile-form input::placeholder {
+        font-size: 12px;
+    }
+
+    .profile-btn {
+        font-size: 12px;
+        padding: 10px 13px;
+        height: 45px;
+    }
+
+    .orders {
+        margin-top: 40px;
+    }
+
+    .orders-title {
+        font-size: 32px;
+    }
+
+    .orders-list {
+        margin-top: 23px;
+        gap: 16px;
+    }
+
+    .orders-list li {
+        gap: 16px;
+        align-items: center;
+        max-width: 350px;
+    }
+
+    .orders-list li img {
+        width: 106px;
+        height: 66px;
+    }
+
+    .order-item__text {
+        gap: 7px;
+    }
+
+    .order-item__name {
+        font-size: 14px;
+    }
+
+    .order-item__count {
+        font-size: 14px;
+    }
+
+    .order-item__price {
+        font-size: 14px;
+    }
+
+    .orders-btn {
+        margin-top: 30px;
+        font-size: 12px;
+        width: 228px;
+        height: 45px;
+    }
+
+    .address {
+        margin-top: 40px;
+        max-width: 472px;
+    }
+
+    .address-title {
+        font-size: 32px;
+    }
+
+    .address-form {
+        margin-top: 30px;
+        max-width: 472px;
+    }
+
+    .address-form input {
+        font-size: 12px;
+    }
+
+    .address-wrapper input {
+        width: 228px;
+    }
+
+    .address-form input::placeholder {
+        font-size: 12px;
+    }
+
+    .address-btn {
+        font-size: 12px;
+        width: 228px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .account .container {
+        display: block;
+    }
+
+    .account-aside {
+       display: block;
+    }
+
+    .aside-list {
+        display: none;
+    }
+
+    .profile {
+        display: block;
+        margin-top: 30px;
+        max-width: none;
+        width: 100%;
+    }
+
+    .profile-title {
+        font-size: 20px;
+    }
+
+    .profile-form input {
+        font-size: 14px;
+        height: 59px;
+    }
+
+    .profile-form input::placeholder {
+        font-size: 14px;
+    }
+
+    .profile-btn {
+        margin-top: 10px;
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .orders {
+        margin-top: 20px;
+        display: block;
+    }
+
+    .orders-title {
+        font-size: 20px;
+    }
+
+    .orders-list {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .orders-list li {
+        gap: 24px;
+        align-items: start;
+        max-width: 330px;
+    }
+
+    .orders-list li img {
+        width: 146px;
+        height: 67px;
+    }
+
+    .order-item__text {
+        gap: 5px;
+    }
+
+    .order-item__name {
+        font-size: 14px;
+    }
+
+    .order-item__count {
+        font-size: 14px;
+    }
+
+    .order-item__price {
+        font-size: 14px;
+    }
+
+    .orders-btn {
+        margin-top: 20px;
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .address {
+        margin-top: 20px;
+        max-width: none;
+        width: 100%;
+        display: block;
+    }
+
+    .address-title {
+        font-size: 20px;
+    }
+
+    .address-form {
+        margin-top: 20px;
+    }
+
+    .address-form input {
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .address-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .address-wrapper input {
+        width: 100%;
+    }
+
+    .address-form input::placeholder {
+        font-size: 14px;
+    }
+
+    .address-btn {
+        margin-top: 20px;
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%;
+        height: 40px;
+    }
+}

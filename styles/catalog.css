@@ -1,0 +1,267 @@
+.catalog {
+    margin-top: 21px;
+}
+
+.catalog .container {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+
+.catalog-sidebar {
+    max-width: 358px;
+    width: 100%;
+}
+
+.item-list {
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+
+.catalog-title__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-block__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--main-black);
+}
+
+.catalog-clear {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-6);
+}
+
+.catalog-choose {
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.catalog-choose button {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 29px;
+    padding: 10px;
+    height: 29px;
+    background: var(--grey-5);
+}
+
+.catalog-block {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--main-gray);
+}
+
+.catalog-category {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catalog-category button {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--main-black);
+}
+
+.catalog-price {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.catalog-price label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--main-black);
+}
+
+.first-block {
+    margin-top: 0;
+}
+
+.price-input {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-input input {
+    border: 1px solid var(--main-gray);
+    border-radius: 8px;
+    padding: 10px;
+    width: 169px;
+    height: 39px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-4);
+}
+
+.price-input input::placeholder {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-4);
+}
+
+.show {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-4);
+}
+
+.sort {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-6);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--grey-2);
+    border-radius: 33px;
+    padding: 13px 10px;
+    width: 169px;
+    height: 40px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+    align-items: start;
+}
+
+.wrapper .links-wrapper {
+    margin-top: 0;
+}
+
+.search {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-4);
+    border: 1px solid var(--main-gray);
+    border-radius: 8px;
+    padding: 6px 6px 6px 13px;
+    width: 280px;
+    height: 39px;
+}
+
+@media screen and (max-width: 1491px) {
+
+    .catalog-sidebar {
+        max-width: 280px;
+    }
+
+    .price-input {
+        margin-top: 20px;
+    }
+
+    .price-input input {
+        width: 130px;
+    }
+
+}
+
+@media screen and (max-width: 1179px) {
+    .catalog {
+        margin-top: 28px;
+    }
+
+    .catalog .container {
+        gap: 16px;
+    }
+
+    .catalog-sidebar {
+        max-width: 228px;
+    }
+
+    .catalog-choose {
+        gap: 4px;
+    }
+
+    .catalog-choose button {
+        font-size: 12px;
+    }
+
+    .catalog-category button {
+        font-size: 15px;
+    }
+
+    .catalog-price label {
+        font-size: 14px;
+    }
+
+    .price-input {
+        margin-top: 20px;
+    }
+
+    .price-input input {
+        width: 106px;
+        font-size: 15px;
+    }
+
+    .price-input input::placeholder {
+        font-size: 15px;
+    }
+
+    .show {
+        font-size: 14px;
+    }
+
+    .sort {
+        font-size: 10px;
+        gap: 5px;
+        padding: 8px 14px;
+        width: 120px;
+        height: 30px;
+    }
+
+    .sort svg {
+        width: 12px;
+    }
+
+    .wrapper {
+        margin-top: 40px;
+    }
+
+    .search {
+        width: 228px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .catalog-sidebar {
+        display: none;
+    }
+}

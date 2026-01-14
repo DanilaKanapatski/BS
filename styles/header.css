@@ -28,3 +28,253 @@
     gap: 20px;
     align-items: center;
 }
+
+/* Базовые стили для модального окна */
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+}
+
+.search-modal.active {
+    display: block;
+}
+
+/* Затемненный фон с блюром */
+.search-modal__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(6, 6, 6, 0.15);
+}
+
+/* Контент модального окна */
+.search-modal__content {
+    position: relative;
+    z-index: 1;
+    background: var(--main-white);
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0 0 20px 20px;
+}
+
+.search-modal__header {
+    max-width: 736px;
+    margin: 0 auto;
+    padding-top: 102px;
+}
+
+/* Форма поиска */
+.search-modal__form {
+    width: 100%;
+}
+
+.search-modal__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-modal__search-icon {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.search-modal__input {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--main-gray);
+    border-radius: 8px;
+    padding: 6px 6px 6px 38px;
+    height: 63px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-4);
+}
+
+.search-modal__input:focus {
+    border-color: #007bff;
+    background: white;
+}
+
+.search-modal__input::placeholder {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-4);
+}
+
+/* Кнопка закрытия (крестик) */
+.search-modal__clear {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.search-modal__clear:hover {
+    opacity: 1;
+    background: #f5f5f5;
+}
+
+.search-modal__body {
+    max-width: 736px;
+    margin: 0 auto 0;
+    height: 102px;
+}
+
+/* Отключение скролла при открытой модалке */
+body.no-scroll {
+    overflow: hidden;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.search-modal__content {
+    animation: slideDown 0.3s ease;
+}
+
+/* Убираем стандартный крестик в поисковом инпуте */
+.search-modal__input[type="search"]::-webkit-search-cancel-button,
+.search-modal__input[type="search"]::-webkit-search-decoration,
+.search-modal__input[type="search"]::-webkit-search-results-button,
+.search-modal__input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/* Для Firefox */
+.search-modal__input[type="search"] {
+    -moz-appearance: textfield;
+}
+
+/* Для IE/Edge */
+.search-modal__input::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.search-modal__input::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+@media screen and (max-width: 1491px) {
+    .header {
+        margin-top: 50px;
+    }
+
+    .search-modal__header {
+        max-width: 880px;
+        padding-top: 91px;
+    }
+
+    .search-modal__body {
+        max-width: 880px;
+        height: 113px;
+    }
+
+}
+
+@media screen and (max-width: 1179px) {
+    .header {
+        margin-top: 30px;
+    }
+
+    .header .container {
+        padding-bottom: 15px;
+    }
+
+    .search-modal__header {
+        max-width: 471px;
+        padding-top: 76px;
+    }
+
+    .search-modal__input {
+        height: 49px;
+    }
+
+    .search-modal__body {
+        max-width: 471px;
+        margin: 0 auto 0;
+        height: 76px;
+    }
+
+}
+
+@media screen and (max-width: 959px) {
+    .header {
+        margin-top: 0;
+    }
+
+    .header img {
+        width: 48px;
+    }
+
+    .header .container {
+        padding-bottom: 12px;
+        padding-top: 6px;
+    }
+
+    .header-list {
+        display: none;
+    }
+
+    /* Затемненный фон с блюром */
+    .search-modal__backdrop {
+        backdrop-filter: blur(3px);
+    }
+
+    .search-modal__header {
+        max-width: 330px;
+        padding-top: 51px;
+    }
+
+    .search-modal__input {
+        height: 43px;
+        font-size: 14px;
+    }
+
+    .search-modal__input::placeholder {
+        font-size: 14px;
+    }
+
+    .search-modal__body {
+        max-width: 330px;
+        height: 62px;
+    }
+
+}
