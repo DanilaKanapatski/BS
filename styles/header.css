@@ -26,7 +26,7 @@
 .header-buttons {
     display: flex;
     gap: 20px;
-    align-items: center;
+    align-items: start;
 }
 
 /* Базовые стили для модального окна */

@@ -235,6 +235,236 @@ body {
     color: var(--main-black);
 }
 
+/* Оверлей модального окна */
+.basket-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(6, 6, 6, 0.15);
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.basket-modal-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Модальное окно корзины */
+.basket-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 951px;
+    background: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.basket-modal-overlay.active .basket-modal {
+    transform: translateX(0);
+}
+
+.basket-content {
+    max-width: 706px;
+    width: 100%;
+    padding: 30px;
+}
+
+/* Заголовок модального окна */
+.basket-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.basket-modal-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-black);
+}
+
+.basket-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Контент корзины */
+.basket-modal-content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.basket {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket-wrapper {
+    display: flex;
+    gap: 36px;
+}
+
+.basket-name {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--main-black);
+}
+
+.basket-article {
+    margin-top: 7px;
+    display: flex;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--grey-6);
+}
+
+.basket-price {
+    margin-top: 7px;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000;
+}
+
+.basket-item {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.basket-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.basket-count {
+    border: 1px solid var(--main-gray);
+    border-radius: 10px;
+    padding: 0px 10px;
+    width: 130px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    justify-content: space-between;
+}
+
+.basket-count button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.basket-count button:first-child::before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: var(--main-gray);
+    right: -20px;
+    top: 15px;
+    transform: rotate(90deg);
+}
+
+.basket-count button:last-child::after {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: var(--main-gray);
+    left: -20px;
+    top: 15px;
+    transform: rotate(90deg);
+}
+
+.basket-count span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000;
+}
+
+.basket-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.basket-links a:first-child {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-black);
+    background: var(--grey-5);
+    border-radius: 12px;
+    padding: 13px 10px;
+    width: 328px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket-links a:last-child {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-white);
+    background: var(--main-black);
+    border-radius: 12px;
+    padding: 13px 10px;
+    width: 328px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket-result {
+    margin-top: 40px;
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--main-black);
+}
+
+
 @media screen and (max-width: 1491px) {
     .container {
         max-width: 1180px;
