@@ -277,7 +277,7 @@ body {
 .basket-content {
     max-width: 706px;
     width: 100%;
-    padding: 30px;
+    padding: 30px 0 30px 30px;
 }
 
 /* Заголовок модального окна */
@@ -320,6 +320,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.basket-item:first-child {
+    padding: 0;
+    border: none;
+}
+
+.basket-item {
+    padding-top: 30px;
+    border-top: 1px solid var(--main-gray);
 }
 
 .basket-wrapper {
@@ -479,6 +489,48 @@ body {
         width: 730px;
     }
 
+
+    /* Оверлей модального окна */
+    .basket-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(8px);
+        background: rgba(6, 6, 6, 0.15);
+        z-index: 1000;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .basket-modal-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Модальное окно корзины */
+    .basket-modal {
+        max-width: 1131px;
+    }
+
+    .basket-content {
+        max-width: 730px;
+    }
+
+    .basket-wrapper {
+        gap: 48px;
+    }
+
+    .basket-item {
+        gap: 48px;
+    }
+
+    .basket-links {
+        gap: 44px;
+    }
+
 }
 
 @media screen and (max-width: 1179px) {
@@ -524,6 +576,91 @@ body {
 
     .auth-desc {
         font-size: 14px;
+    }
+
+    /* Модальное окно корзины */
+    .basket-modal {
+        max-width: 412px;
+    }
+
+    .basket-content {
+        max-width: 412px;
+        padding: 30px 32px 30px 30px;
+    }
+
+    .basket-modal-title {
+        font-size: 32px;
+    }
+
+    /* Контент корзины */
+    .basket-modal-content {
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .basket-item {
+        padding-top: 15px;
+    }
+
+    .basket-wrapper {
+        gap: 16px;
+        align-items: center;
+    }
+
+    .basket-wrapper img {
+        width: 106px;
+    }
+
+    .basket-block {
+        max-width: 228px;
+        width: 100%;
+    }
+
+    .basket-name {
+        font-size: 14px;
+    }
+
+    .basket-article {
+        font-size: 14px;
+    }
+
+    .basket-price {
+        font-size: 14px;
+    }
+
+    .basket-item {
+        flex-direction: column;
+        gap: 7px;
+        align-items: end;
+    }
+
+    .basket-links {
+        margin-top: 20px;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .basket-links a:first-child {
+        font-size: 12px;
+        line-height: 130%;
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .basket-links a:last-child {
+        font-size: 12px;
+        line-height: 130%;
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .basket-result {
+        margin-top: 20px;
+        font-size: 16px;
     }
 
 }
@@ -598,6 +735,120 @@ body {
     .auth-links button {
         font-size: 12px;
     }
+
+    /* Модальное окно корзины */
+    .basket-modal {
+        max-width: 360px;
+    }
+
+    .basket-content {
+        max-width: 360px;
+        padding: 30px 15px 15px 15px;
+    }
+
+    .basket-modal-title {
+        font-size: 22px;
+    }
+
+    /* Контент корзины */
+    .basket-modal-content {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .basket-item {
+        padding-top: 20px;
+    }
+
+    .basket-wrapper {
+        gap: 25px;
+    }
+
+    .basket-name {
+        font-size: 14px;
+    }
+
+    .basket-article {
+        margin-top: 10px;
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .basket-price {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .basket-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: end;
+    }
+
+    .basket-block {
+        gap: 27px;
+    }
+
+    .basket-count {
+        padding: 0px 7px 0px 3px;
+        width: 110px;
+        height: 34px;
+        gap: 16px;
+    }
+
+    .basket-count button:first-child::before {
+        right: -20px;
+        top: 15px;
+    }
+
+    .basket-count button:last-child::after {
+        left: -20px;
+        top: 15px;
+    }
+
+    .basket-count span {
+        font-size: 14px;
+    }
+
+    .basket-links {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .basket-links a:first-child {
+        font-size: 12px;
+        line-height: 130%;
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .basket-links a:last-child {
+        font-size: 12px;
+        line-height: 130%;
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .basket-result {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .basket-wrapper img {
+        width: 146px !important;
+    }
+
+    .basket-block {
+        width: 160px;
+    }
+
 
 }
 

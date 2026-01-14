@@ -524,7 +524,7 @@
 
     .orders {
         margin-top: 20px;
-        display: block;
+        display: block !important;
     }
 
     .orders-title {
@@ -576,7 +576,7 @@
         margin-top: 20px;
         max-width: none;
         width: 100%;
-        display: block;
+        display: block !important;
     }
 
     .address-title {
